@@ -204,6 +204,7 @@ namespace UsersAppWindowsForms
             this.Controls.Add(this.textBoxLogin);
             this.Name = "AddUserForm";
             this.Text = "Добавление пользователя";
+            this.Load += new System.EventHandler(this.AddUserForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -151,6 +151,9 @@ namespace UsersAppWindowsForms
 
         }
 
+        private void AddUserForm_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }

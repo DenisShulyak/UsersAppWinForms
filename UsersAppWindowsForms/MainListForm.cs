@@ -16,11 +16,16 @@ namespace UsersAppWindowsForms
     {
         private const int totalRecords = 43;
         private const int pageSize = 10;
-        
+        private int offset = 0;
         public MainListForm()
         {
             InitializeComponent();
+            if (Datas.IsCreateUser)
+            {
+            Datas datas = new Datas();
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "Index" });
+                Datas.IsCreateUser = false;
+            }
             bindingNavigator1.BindingSource = bindingSource1;
             bindingSource1.CurrentChanged += new System.EventHandler(bindingSource1_CurrentChanged);
             bindingSource1.DataSource = new PageOffsetList();
@@ -29,11 +34,21 @@ namespace UsersAppWindowsForms
         private void bindingSource1_CurrentChanged(object sender, EventArgs e)
         {
             // The desired page has changed, so fetch the page of records using the "Current" offset 
-            int offset = (int)bindingSource1.Current;
-            //var records = new List<User>();
-            //for (int i = offset; i < offset + pageSize && i < totalRecords; i++)
-            //    records.Add(new User {  });
-            dataGridView1.DataSource = Datas.Users;
+            var records = new List<User>();
+            offset = (int)bindingSource1.Current;
+            int offsetPlus = offset;
+            for (int i = offset; i < offset + pageSize && i < Datas.Users.Count; i++)
+            {
+                if (Datas.Users.Last() == Datas.Users.ElementAt(i))
+                {
+                    records.Add(Datas.Users.ElementAt(i));
+                    break;
+                }
+                records.Add(Datas.Users.ElementAt(i));
+                offsetPlus++;
+            }
+            offset = offsetPlus;
+            dataGridView1.DataSource = records;
         }
 
         class Record
@@ -49,7 +64,7 @@ namespace UsersAppWindowsForms
             {
                 // Return a list of page offsets based on "totalRecords" and "pageSize"
                 var pageOffsets = new List<int>();
-                for (int offset = 0; offset < totalRecords; offset += pageSize)
+                for (int offset = 0; offset < Datas.Users.Count; offset += pageSize)
                     pageOffsets.Add(offset);
                 return pageOffsets;
             }
