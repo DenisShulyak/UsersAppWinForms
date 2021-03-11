@@ -1,0 +1,11 @@
+C:\Users\denis\source\repos\UsersAppWindowsForms\UsersAppWindowsForms\bin\Debug\UsersAppWindowsForms.exe.config
+C:\Users\denis\source\repos\UsersAppWindowsForms\UsersAppWindowsForms\bin\Debug\UsersAppWindowsForms.exe
+C:\Users\denis\source\repos\UsersAppWindowsForms\UsersAppWindowsForms\bin\Debug\UsersAppWindowsForms.pdb
+C:\Users\denis\source\repos\UsersAppWindowsForms\UsersAppWindowsForms\obj\Debug\UsersAppWindowsForms.csprojAssemblyReference.cache
+C:\Users\denis\source\repos\UsersAppWindowsForms\UsersAppWindowsForms\obj\Debug\UsersAppWindowsForms.Properties.Resources.resources
+C:\Users\denis\source\repos\UsersAppWindowsForms\UsersAppWindowsForms\obj\Debug\UsersAppWindowsForms.csproj.GenerateResource.cache
+C:\Users\denis\source\repos\UsersAppWindowsForms\UsersAppWindowsForms\obj\Debug\UsersAppWindowsForms.csproj.CoreCompileInputs.cache
+C:\Users\denis\source\repos\UsersAppWindowsForms\UsersAppWindowsForms\obj\Debug\UsersAppWindowsForms.exe
+C:\Users\denis\source\repos\UsersAppWindowsForms\UsersAppWindowsForms\obj\Debug\UsersAppWindowsForms.pdb
+C:\Users\denis\source\repos\UsersAppWindowsForms\UsersAppWindowsForms\obj\Debug\UsersAppWindowsForms.AddUserForm.resources
+C:\Users\denis\source\repos\UsersAppWindowsForms\UsersAppWindowsForms\obj\Debug\UsersAppWindowsForms.MainListForm.resources
