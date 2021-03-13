@@ -87,7 +87,16 @@ namespace UsersAppWindowsForms
             Datas.Users.RemoveAt(dataGridView1.CurrentRow.Index);
             MainListForm listForm = new MainListForm();
             listForm.Show();
-            this.Close();
+            if (Datas.IsHide)
+            {
+            this.Hide();
+                Datas.IsHide = false;
+            }
+            else
+            {
+                this.Close();
+            }
+
         }
     }
 }
